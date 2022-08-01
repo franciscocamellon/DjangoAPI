@@ -1,7 +1,7 @@
-from django.urls import include, re_path
+from django.urls import path
 from EmployeeApp import views
 
 urlpatterns = [
-    re_path(r'^department$', views.department_api),
-    re_path(r'^department/([0-9]+)$', views.department_api)
+    path('department/', views.department_api),
+    path('department/<int:pk>/', views.department_api)
 ]
